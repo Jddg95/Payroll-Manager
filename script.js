@@ -8,6 +8,7 @@ const collectEmployees = function() {
   const employees = [];
 
   let addAnother ="true";
+
   //while loop 
   while(addAnother) {
   // userinput in promp 
@@ -28,15 +29,33 @@ const collectEmployees = function() {
 
   addAnother = window.confirm("Would you like to add another employee?");
   }   
+  return employees; // return the array of employees 
 }
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
+  // initialize the total salary variable 
+  let salaryTotal = 0;
+
+  //loop through each employee in the array 
+  for (let i = 0; i < employeesArray.length; i++) {
+    // add the salary of the current employee to the total 
+    salaryTotal = employeesArray[i].salary;
+  }
+  // calculate the avergae salary 
+  const salaryAverage = salaryTotal / employeesArray.length;
+
+  // display 
+  const averageSalaryElement = document.getElementById("average-salary");
+
+  
 }
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
+  const getRandomEmployee = 
+  
   // TODO: Select and display a random employee
 }
 /*
